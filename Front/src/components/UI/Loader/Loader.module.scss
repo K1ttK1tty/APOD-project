@@ -1,0 +1,79 @@
+$px0: 0px;
+$center: center;
+.Loader {
+    font-size: 100px;
+    position: relative;
+    min-width: 290px;
+    max-width: 310px;
+    height: 100px;
+    top: 0px;
+    left: $px0;
+    display: flex;
+    justify-content: space-between;
+    align-items: $center;
+    z-index: 15;
+}
+.LoaderWrapper {
+    width: 100%;
+    top: $px0;
+    left: $px0;
+    right: $px0;
+    bottom: $px0;
+    background-color: rgb(255, 255, 255, 0.7);
+    position: fixed;
+    display: flex;
+    justify-content: $center;
+    align-items: $center;
+}
+.dot1,
+.dot2,
+.dot3 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.dot1 {
+    background-color: red;
+    animation: dot1 ease 1.4s infinite;
+}
+.dot2 {
+    background-color: green;
+    animation: dot2 ease 1.4s infinite;
+}
+.dot3 {
+    background-color: blue;
+    animation: dot3 ease 1.4s infinite;
+}
+@keyframes dot1 {
+    0% {
+        scale: 0.9;
+    }
+    15% {
+        scale: 1.25;
+    }
+    30% {
+        scale: 0.9;
+    }
+}
+@keyframes dot2 {
+    30% {
+        scale: 0.95;
+    }
+    45% {
+        scale: 1.26;
+    }
+    60% {
+        scale: 0.95;
+    }
+}
+@keyframes dot3 {
+    60% {
+        scale: 1;
+    }
+    75% {
+        scale: 1.27;
+    }
+    90% {
+        scale: 1;
+    }
+}

@@ -1,0 +1,189 @@
+$percent100:100%;
+$percent50:50%;
+$relative:relative;
+$px0:0px;
+$fff:#fff;
+$center:center;
+
+a {
+    color: inherit;
+    &:visited {
+        color: inherit;
+    }
+    cursor: pointer;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "STIX Two Text", serif ;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav {
+    background-color: $fff;
+    position: fixed;
+    top: $px0;
+    left: $px0;
+    width: $percent100;
+    height: 60px;
+    display: flex;
+    align-items: $center;
+    justify-content: $center;
+    box-shadow: 0px 6px 12px 1px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.navWrapper {
+    width: $percent100;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+.menu__items {
+    position: $relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: $center;
+    padding: 0px 33px;
+    // width: $percent100;
+    font-size: 19px;
+}
+
+.menuItem {
+    background-color: $fff;
+    border-radius: 8px;
+    color: #525761;
+    position: $relative;
+    font-weight: 500;
+}
+
+.mobileHidden {
+    display: block;
+}
+
+.burgerItem {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    position: $relative;
+    z-index: 12;
+}
+@media (max-width: 768px) {
+    .mobileHidden {
+        display: none;
+    }
+    .burgerItem {
+        display: block;
+    }
+}
+
+.linkMenuTab {
+    padding: 10px;
+    position: $relative;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: $px0;
+        height: 2px;
+        width: $percent100;
+        background-color: #525761;
+        scale: 0;
+        transition: 0.3s;
+    }
+
+    @media (min-width: 769px) {
+        &:hover {
+            &:before {
+                scale: 0.9;
+                background-color: blue;
+            }
+        }
+    }
+}
+.mobileMenuPadding {
+    padding: 10px;
+}
+
+.activeTabtab {
+    border: 1px solid blue;
+}
+
+.mobileMenu {
+    position: fixed;
+    width: 275px;
+    top: $px0;
+    height: 120%;
+    right: $px0;
+    padding-top: 90px;
+    background: $fff;
+    transform: translate($percent100);
+    transition: 0.35s;
+    z-index: 10;
+}
+
+.mobileMenu._active {
+    transform: translate(0%);
+    box-shadow: -4px 1px 29px 12px rgba(0, 0, 0, 0.33);
+}
+
+.mobileMenuItems {
+    padding-left: 22%;
+    font-size: 21px;
+}
+.mobileMenuItem {
+    margin-bottom: 26px;
+}
+
+// mobile menu
+.menuIcon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menuIcon {
+        z-index: 4;
+        display: block;
+        position: $relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .menuIcon::after,
+    .menuIcon::before,
+    .menuIcon span {
+        left: $px0;
+        position: absolute;
+        width: $percent100;
+        height: 10%;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        background: rgb(0, 0, 0);
+    }
+    .menuIcon::before,
+    .menuIcon::after {
+        content: "";
+    }
+    .menuIcon::before {
+        top: $px0;
+    }
+    .menuIcon::after {
+        bottom: $px0;
+    }
+    .menuIcon span {
+        top: $percent50;
+        transform: scale(1) translate($px0, -$percent50);
+    }
+    .menuIcon._active:before {
+        top: $percent50;
+        transform: rotate(-45deg) translate($px0, -$percent50);
+    }
+    .menuIcon._active:after {
+        bottom: $percent50;
+        transform: rotate(45deg) translate($px0, $percent50);
+    }
+    .menuIcon._active span {
+        transform: scale(0) translate($px0, -$percent50);
+    }
+}

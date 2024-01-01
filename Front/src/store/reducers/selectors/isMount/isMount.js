@@ -1,0 +1,1 @@
+export const isMount = state => state?.MobileMenu?.isMount || false

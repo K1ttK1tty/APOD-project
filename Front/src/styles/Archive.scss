@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;500&display=swap");
+$tac: center;
+$percent100: 100%;
+.archive {
+    margin-top: 60px;
+    width: $percent100;
+    background-color: #f4f4f4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: $percent100;
+}
+.archiveWrapper {
+    flex-grow: 1;
+    height: 100%;
+}
+.archiveTitle {
+    text-align: $tac;
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 24px;
+    margin-bottom: 8px;
+}
+.archiveSubTitle {
+    text-align: $tac;
+    font-size: 19px;
+    margin-bottom: 13px;
+}
+.forms {
+    margin: 0px auto 25px;
+    max-width: 520px;
+    height: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 10px;
+}
+@media (max-width: 440px) {
+    .forms {
+        margin: 0px auto 100px;
+    }
+}
+.errorStyle {
+    display: flex;
+    align-items: $tac;
+    justify-content: space-between;
+    height: 20px;
+    width: 200px;
+    font-size: 18px;
+}
+.getNewRequest {
+    font-weight: 500;
+    font-size: 22px;
+    text-align: $tac;
+    margin: 50px 0px;
+}
+.errorStyle {
+    background: #f44336;
+    color: white;
+    font-size: 18px;
+    width: auto;
+}
+.forms-item {
+    margin: 0px 5px;
+}
+@media (max-width: 440px) {
+    .MuiButton-root {
+        margin: 28px auto !important;
+        width: 110px !important;
+        height: 40px !important;
+    }
+    .MuiSvgIcon-root {
+        position: static !important;
+    }
+}
+@media (max-width: 360px) {
+    .MuiInputBase-root {
+        width: 85px !important;
+    }
+    .MuiFormLabel-root {
+        font-size: 18px !important;
+    }
+    .forms {
+        padding: 0px 0px;
+    }
+    .forms-item {
+        margin: 0px 0px;
+    }
+}
+.MuiButton-root {
+    font-family: "STIX Two Text", serif  !important;
+    font-size: 16px !important;
+    letter-spacing: 0.7px !important;
+}

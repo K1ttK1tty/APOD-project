@@ -1,0 +1,80 @@
+$max-width: 1000px;
+$mu: 0px auto;
+$relative: relative;
+$flex: flex;
+a {
+    color: inherit;
+    &:visited {
+        color: inherit;
+    }
+    cursor: pointer;
+}
+.footer {
+    background-color: #212121;
+    // width: 100%;
+    min-height: 200px;
+    box-shadow: 0px -7px 8px 0px rgba(0, 1, 2, 0.3);
+    color: white;
+    padding: 30px;
+    position: sticky;
+    top: 0px;
+}
+.footerWrapper {
+    max-width: $max-width;
+    margin: $mu;
+}
+.footerContent {
+    display: $flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.nasaOfficial {
+    position: $relative;
+    a {
+        transition: 0.18s;
+    }
+    a:hover {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+.links {
+    text-align: right;
+    position: $relative;
+    top: 14px;
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nasaOfficial {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .links {
+        text-align: left;
+        display: $flex;
+        flex-direction: column-reverse;
+    }
+    .email {
+        margin-bottom: 20px;
+    }
+}
+
+.gitIcon {
+    margin-bottom: 6px;
+    padding: 5px;
+    display: inline-block;
+}
+.email {
+    max-width: 350px;
+}
+.authorship {
+    position: $relative;
+    bottom: 0px;
+    font-size: 13px;
+    max-width: $max-width;
+    margin: $mu;
+}

@@ -1,0 +1,1 @@
+export const getDaysPageError = state => state?.DaysPage?.fetchError || ''

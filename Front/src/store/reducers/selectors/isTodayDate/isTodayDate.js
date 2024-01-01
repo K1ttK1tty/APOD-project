@@ -1,0 +1,1 @@
+export const isTodayDate = state => state?.DaysPage?.isTodayDate || false

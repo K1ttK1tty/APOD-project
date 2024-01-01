@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;500&display=swap");
+html {
+    box-sizing: border-box;
+}
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    scroll-behavior: smooth;
+}
+button {
+    border: none;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+// eject scrolling
+body::-webkit-scrollbar {
+    width: 0;
+}
+// share styles
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "STIX Two Text", serif ;
+    list-style: none;
+    text-decoration: none;
+}
+a {
+    color: inherit;
+    &:visited {
+        color: inherit;
+    }
+    cursor: pointer;
+}
+#root {
+    height: 100%;
+    width: 100%;
+}
+._activeMenuTab {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 0px;
+        height: 2px;
+        width: 100%;
+        background-color: #2f4f8f;
+        scale: 0.7;
+        transition: 0.3s;
+        border-radius: 20px;
+    }
+    @media (min-width: 769px) {
+        &:hover {
+            &:after {
+                scale: 0.9;
+                background-color: blue;
+            }
+        }
+    }
+}
+

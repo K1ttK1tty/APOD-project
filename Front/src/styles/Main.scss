@@ -1,0 +1,224 @@
+$font40px: 40px;
+$topLeft2: 2%;
+$absPos: absolute;
+$percent100: 100%;
+$margin0auto: 0px auto;
+$whiteColor: #fff;
+.Main {
+    width: $percent100;
+    margin-top: 60px;
+    position: relative;
+    min-height: $percent100;
+}
+
+.fontStyles {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+.sticky {
+    position: sticky;
+    top: 50px;
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 1500px;
+    margin: $margin0auto;
+    padding: 20% 30px 15%;
+}
+@media (max-width:375px){
+    .fontStyles {
+        line-height: 1.4;
+    }
+}
+
+@media (min-width: 2000px) {
+    .fontStyles {
+        font-size: 22px;
+    }
+}
+@media (max-width: 1024px) {
+    .fontStyles {
+        font-size: 1.1em;
+    }
+}
+// blocks styles
+
+.introducing {
+    background-color: #ececec;
+    color: black;
+
+    &:before {
+        content: "Introducing";
+        top: 1%;
+        left: 1%;
+        position: $absPos;
+        color: rgb(0, 0, 3, 0.2);
+        font-size: $font40px;
+    }
+}
+
+.intro-wrapper {
+    padding: 20% 60px 15%;
+}
+.history {
+    // background-color: #212121;
+    background: url("../pages/images/histBack.png") center/cover no-repeat;
+    color: $whiteColor;
+
+    &:before {
+        content: "History";
+        top: $topLeft2;
+        left: $topLeft2;
+        position: $absPos;
+        color: rgba(255, 255, 255, 0.2);
+        font-size: $font40px;
+    }
+}
+.histImg {
+    height: $percent100;
+    width: $percent100;
+    object-fit: cover;
+    border-radius: 9px;
+    box-shadow: 0px 0px 12px 8px rgba(2, 0, 0, 1);
+}
+
+.hist-img {
+    margin-right: 30px;
+}
+
+.hist-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    padding: 15% 30px 15%;
+}
+
+@media (max-width: 1440px) {
+    .hist-wrapper {
+        padding: 21% 30px 15%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .intro-wrapper {
+        padding: 24% 60px 15%;
+    }
+    .hist-wrapper {
+        padding: 22% 30px 15%;
+    }
+}
+@media (max-width:375px){
+    .intro-wrapper {
+        padding: 18% 40px 15%;
+    }
+}
+
+.hist-txt {
+    max-width: 50%;
+}
+@media (max-width: 1023px) {
+    .hist-img {
+        display: none;
+    }
+    .hist-wrapper {
+        justify-content: center;
+    }
+    .hist-txt {
+        max-width: $percent100;
+    }
+}
+
+.today {
+    background: url("../pages//images//todayImg.png") center/cover no-repeat;
+    &:before {
+        content: "Today";
+        top: $topLeft2;
+        left: $topLeft2;
+        position: $absPos;
+        color: rgba(255, 255, 255, 0.2);
+        font-size: $font40px;
+    }
+}
+.today-wrapper {
+    color: $whiteColor;
+    background: rgb(0, 0, 0, 0.15);
+    width: $percent100;
+    height: $percent100;
+    padding: 21% 50px 19%;
+    p {
+        width: 90%;
+        margin: $margin0auto;
+    }
+    @media (max-width:400px){
+        padding: 16% 20px 19%;
+    }
+    @media (max-width:375px){
+        padding: 16% 10px 14%;
+    }
+}
+.blackHole {
+    background: url("../pages//images/blackHole.webp") center/cover no-repeat;
+
+    &:before {
+        content: "Black hole";
+        top: $topLeft2;
+        left: $topLeft2;
+        position: $absPos;
+        color: rgba(255, 255, 255, 0.35);
+        font-size: $font40px;
+    }
+}
+
+.earth {
+    background: url("../pages//images/earth.png") center/cover no-repeat;
+
+    &:before {
+        content: "Earth";
+        top: $topLeft2;
+        left: $topLeft2;
+        position: $absPos;
+        color: rgba(255, 255, 255, 0.35);
+        font-size: $font40px;
+    }
+    p {
+        width: 90%;
+        margin: $margin0auto;
+    }
+}
+.earth-wrapper {
+    color: $whiteColor;
+    background: rgb(0, 0, 0, 0.3);
+    width: $percent100;
+    height: $percent100;
+    padding: 21% 50px 19%;
+    p {
+        font-size: 22px;
+        width: 90%;
+        margin: $margin0auto;
+    }
+}
+
+.nasa {
+    background: url("../pages/images/NasaBuilding.webp") center/cover no-repeat;
+
+    &:before {
+        content: "NASA";
+        top: $topLeft2;
+        left: $topLeft2;
+        position: $absPos;
+        color: rgba(255, 255, 255, 0.35);
+        font-size: $font40px;
+    }
+}
+.nasa-wrapper {
+    color: $whiteColor;
+    width: $percent100;
+    height: $percent100;
+    padding: 21% 50px 19%;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
